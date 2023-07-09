@@ -1,0 +1,24 @@
+<p>login works!</p>
+<form #loginForm="ngForm"(ngSubmit)="loginUser(loginForm.value)">
+    <section id="para">
+        <label>UserName:</label>
+        <br/>
+        <br/>
+        <input type="email" required #userName="ngModel" name="userName"  email placeholder="userName" ngModel >
+        <br/><span *ngIf="userName.invalid && userName.touched" style="color:red">Please Enter valid UserName</span>
+        <br/>
+        <label>PassWord:</label>
+        <br/>
+        <br/>
+        <input type="password" name="password" minlength="2" required #password="ngModel" placeholder="enter password" ngModel required>
+        <br/>
+        <span *ngIf="password.invalid && password.touched" style="color:red">Please Enter valid password</span>
+        <br/>
+        <br/>
+        <div class="par">
+        <button [disabled]="loginForm.invalid" (click)="loginUser(loginForm.value)">Submit</button>
+        </div>
+    </section>
+    <h1>Hello {{username}}! Welcome To Angular</h1>
+</form>
+

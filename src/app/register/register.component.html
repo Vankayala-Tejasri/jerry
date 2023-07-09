@@ -1,0 +1,38 @@
+<p>register works!</p>
+<form #registerForm="ngForm"(ngSubmit)="registerUser(registerForm.value)">
+    <section id="para">
+        <label>UserName:</label>
+        <br/>
+        <br/>
+        <input type="text" #username="ngModel" name="username" placeholder="userName" required ngModel>
+        <br/>
+        <span *ngIf="username.invalid && username.touched" style="color:red">Please Enter valid UserName</span>
+        <span *ngIf="username.invalid &&username.touched" minlength="2" maxlength="50" style="color:red"> minlength is 50 UserName</span>
+        <br/>
+        <label>Date Of Birth:</label>
+        <br/>
+        <br/>
+        <input type="date" #date="ngModel" name="date" placeholder="Enter your date of birth" required ngModel>
+        <br/>
+        <span *ngIf="date.invalid && date.touched" style="color:red">Please Select Date Of Birth</span>
+        <br/>
+        <label>Email Id:</label>
+        <br/>
+        <br/>
+        <input type="email" #email="ngModel" name="email" email placeholder="Please Enter Email" required ngModel>
+        <span *ngIf="email.invalid && email.touched" style="color:red">Please Enter Email</span>
+        <br/>
+        <br/>
+        <label>PassWord:</label>
+        <br/>
+        <br/>
+        <input type="password" #password="ngModel" name="password" placeholder="enter password" required ngModel>
+        <br/>
+        <span *ngIf="password.invalid && password.touched" style="color:red">Please Enter password</span>
+        <br/>
+        <div class="par">
+        <button type="submit" (Click)="registerUser(registerForm.value)">Submit</button>
+        </div>
+    </section>
+    <p>hello {{username.value}}</p>
+</form>

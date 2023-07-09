@@ -1,0 +1,30 @@
+#para{
+    top:23%;
+    width:350px;
+    left:30%;
+    position:absolute;
+    color:black;
+}
+label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    margin:15px 0;
+    color:black;
+}
+input{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: smaller;
+    width:145%;
+    padding:10px 5px;
+	border:1.5px solid black;
+	border-radius:4px;
+	color:black;
+}
+button{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: small;
+	width:45%;
+	padding:9px 5px;
+	border:1.5px solid black;
+	border-radius:4px;
+}
